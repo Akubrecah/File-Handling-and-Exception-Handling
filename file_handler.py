@@ -16,3 +16,14 @@ try:
     print(f"Content from {source_file} has been read and written to {destination_file} in uppercase.")
 except Exception as e:
     print(f"An error occurred: {e}")
+
+
+except FileNotFoundError:
+    print(f"Error: The file {source_file} was not found.")
+
+except PermissionError:
+    print(f"Error: You do not have permission to read/write {source_file}.")
+
+except Exception as e:
+    print(f"An unexpected error occurred: {e}")
+    
