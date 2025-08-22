@@ -7,16 +7,13 @@ try:
         content = src.read()
 
     # Converting to uppercase
-        content_modified = content.upper()
+    content_modified = content.upper()
 
     # Write to destination_file
     with open(destination_file, 'w') as dest:
         dest.write(content_modified)
 
     print(f"Content from {source_file} has been read and written to {destination_file} in uppercase.")
-except Exception as e:
-    print(f"An error occurred: {e}")
-
 
 except FileNotFoundError:
     print(f"Error: The file {source_file} was not found.")
@@ -38,6 +35,7 @@ while True:
         with open(file1, 'r') as f1:
             content1 = f1.read()
             print(f"Content of {file1}:\n{content1}")
+            
     except FileNotFoundError:
         print(f"Error: The file {file1} was not found.")
     
@@ -46,4 +44,3 @@ while True:
 
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
-        
